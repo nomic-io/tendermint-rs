@@ -51,7 +51,8 @@ impl Default for SubjectiveInit {
             height: 1,
             // TODO(liamsi): a default hash here does not make sense unless it is a valid hash
             // from a public network
-            validators_hash: "A5A7DEA707ADE6156F8A981777CA093F178FC790475F6EC659B6617E704871DD"
+            // This hash is for the interchainio/tendermint custom docker image in CI.
+            validators_hash: "3FE2453BB45CADB9E80BBD655870EA33677756EC43D0A656448C829185AB0FBF"
                 .to_owned(),
         }
     }

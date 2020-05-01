@@ -45,7 +45,6 @@ impl From<PublicKey> for PubKeyResponse {
 mod tests {
     use super::*;
     use prost::Message;
-    use std::error::Error;
 
     #[test]
     fn test_empty_pubkey_msg() {
@@ -88,7 +87,7 @@ mod tests {
 
         match PubKeyRequest::decode(&want) {
             Ok(have) => assert_eq!(have, msg),
-            Err(err) => panic!(err.description().to_string()),
+            Err(err) => panic!(err.to_string()),
         }
     }
 
